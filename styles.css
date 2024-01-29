@@ -1,0 +1,102 @@
+:root {
+    --primary-color: #adf0d4;
+    --secondary-color: #1fd8a4;
+    --bg-color: black;
+    --secondary-bg-color: rgb(50, 49, 49);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+    transition-duration: 300ms;
+}
+
+@media (min-width:640px) {
+
+}
+
+body {
+    background: var(--bg-color);
+    background: linear-gradient(180deg, var(--bg-color) 20%, var(--secondary-bg-color) 90%);
+    color: var(--primary-color);
+    padding: 24px;
+    
+}
+
+header {
+    display:flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+img {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    justify-content: center;
+    margin:auto;
+}
+
+.topRight {
+    font-size: 1.5em;
+}
+
+.familyPhoto img {
+    border: 5px solid black;
+}
+
+.parents {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding:24px;
+    
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content:center;
+    margin-right:auto;
+    margin-left: auto;
+    width: 50%;
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+.childrenName {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.childrenImage {
+    display:flex;
+}
+
+.childrenImage img {
+    max-width: 400px;
+    display: flex;
+    padding: 25px;
+
+}
+
+footer {
+    display:flex;
+    justify-content: space-between;
+    border-top: 2px solid white;
+    margin-top: 36px;
+    padding-top: 12px;
+}
+
+a{
+    color: lightcyan;
+    padding: 18px;
+}
