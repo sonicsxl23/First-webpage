@@ -1,198 +1,100 @@
-:root {
-    --primary-color:#adf0d4;
-    --secondary-color:#1fd8a4;
-    --bg-color:#2897D7;
-}
-
-
-* {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    transition-duration: 200ms;
-}
-
-body{
-    background: rgb(40,151,215);
-    background: linear-gradient(180deg, rgba(40,151,215,1) 20%, rgba(9,9,121,1) 90%);
-    color:lightgoldenrodyellow;
-    text-shadow: 1px 1px rgba(36, 35, 35, 0.8);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 72px;
-    padding: 14px;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-
-header, main, footer {
-    max-width: 90%;
-    margin: 0 auto;
-    width: 100%;
-}
-
-p {
-    font-size: 1.5em;
-}
-
-header {
-    background: rgb(40,151,215)
-}
-
-nav {
-    color: var(--secondary-color);
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
-
-nav a:hover {
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-.darkerText {
-    color:rgb(239, 239, 146);
-}
-
-main, section, .nameContainer {
-    display:flex;
-    flex-direction: column;
-}
-
-main {
-    gap:32px;
-
-}
-
-.nameContainer {
-    gap: 8px;
-}
-
-section {
-    gap: 48px;
-}
-
-.profileImage{
-    border-radius: 100%;
-    max-width: 110px;
-    overflow:hidden;
-}
-
-.profileImage img{
-    width:100%;
-    aspect-ratio: 1/1;
+:root{
+    --bg1:#1c2a44;
+    --bg2:#0b1324;
+    --card:#111a2e;
+    --ink:#e8f0ff;
+    --muted:#b6c2da;
+    --brand:#37e6b1;
+    --brand-ink:#0f1d2f;
+    --ring:#3ba7ff;
+  }
+  
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg,var(--bg1),var(--bg2));
+    min-height:100vh; display:flex; flex-direction:column;
+  }
+  
+  a{color:var(--brand); text-decoration:none}
+  a:hover{opacity:.9}
+  
+  .container{width:min(1100px,92%); margin:32px auto; display:grid; gap:24px}
+  
+  .site-header, .site-footer{width:min(1100px,92%); margin:16px auto}
+  .site-header{
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    padding:12px 0;
+  }
+  .brand{display:flex; align-items:center; gap:14px}
+  .avatar img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
     object-fit: cover;
-
-}
-
-.statsContainer {
-    display: flex;
-    align-items: stretch;
-    gap: 24px;
-    display: flex;
-    flex-direction: column;
-}
-
-.stats {
-    display: flex;
-    flex-direction: column;
-}
-
-.stats > div {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.stats div i {
-    font-size: 1.3em;
-}
-
-.stats div div {
-    display: grid;
-    place-items: center;
-    min-width: 40px;
-}
-
-.aboutMe {
-    line-height: 1.5em;
-}
-
-.outreach {
-    display:flex;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;    
-    margin-right: auto;
-    width: fit-content;
-    color:bisque;
-    text-decoration: none;
-}
-
-.outreach:hover {
-    opacity: 0.8;
-}
-
-.outreach i {
-    transform: rotate(-45deg);
-    font-size: 1.4em;
-}
-
-@media (min-width: 640px) {
-    .stats {
-        gap:0px;
-    }
-    .statsContainer {
-        flex-direction: row;
-    }
-    .aboutMe {
-        width: 80%;
-        margin-right: auto;
-    }
-}
-
-.projectContainer {
-    display: flex;
-    flex-direction: column;
-    gap:24px;
-}
-
-.projectItem {
-    display: flex;
-    align-items: stretch;
-    gap: 240px;
-}
-
-.projectItem div:first-child {
-    display:flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.projectItem div:last-child {
-    aspect-ratio: 1/1;
-    max-width: 30%;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.projectItem div:last-child  img {
-    width: 100%;
-    height: 100%;
-    object-fit:contain;
-    border-radius: 10px;
-}
-
-.headerText {
-    margin-bottom: 24px;
-}
+    display: block;
+  }
+  
+  .brand-text .name{margin:0;font-size:1.4rem}
+  .brand-text .tagline{margin:2px 0 0;color:var(--muted); font-size:.95rem}
+  
+  .site-nav{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
+  .btn{
+    background:var(--brand); color:var(--brand-ink); padding:10px 14px;
+    border-radius:10px; font-weight:700; border:2px solid var(--brand); display:inline-block
+  }
+  .btn:hover{transform:translateY(-1px)}
+  .btn.outline{
+    background:transparent; color:var(--ink); border-color:var(--ink)
+  }
+  .btn.primary{box-shadow:0 0 0 0 rgba(59,167,255,0); outline:none}
+  .btn.primary:focus{box-shadow:0 0 0 3px var(--ring)}
+  
+  .card{
+    background:var(--card);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:16px; padding:22px;
+    box-shadow:0 6px 24px rgba(0,0,0,.25)
+  }
+  
+  .grid-3{display:grid; gap:18px}
+  @media (min-width: 860px){
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+  }
+  
+  .facts .fact{display:flex; gap:14px; align-items:flex-start}
+  .facts .fact i{font-size:1.6rem; color:var(--brand); margin-top:2px}
+  .facts h3{margin:.2rem 0 .25rem}
+  .facts p{margin:0; color:var(--muted)}
+  
+  .about p{margin:0; line-height:1.65}
+  
+  .highlights h2, .skills h2, .about h2, .contact h2{margin-top:0}
+  .timeline{list-style:none; margin:0; padding:0; display:grid; gap:16px}
+  .timeline .meta{color:var(--muted); font-size:.95rem}
+  .timeline h4{margin:.1rem 0}
+  .timeline p{margin:.35rem 0 0; color:#dbe6ff}
+  
+  .skills .chip-list{
+    display:flex; flex-wrap:wrap; gap:10px; margin:0; padding:0; list-style:none
+  }
+  .skills .chip-list li{
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.04);
+    padding:8px 12px; border-radius:999px; font-weight:600; color:#eaf2ff
+  }
+  
+  .contact .contact-list{
+    list-style:none; padding:0; margin:0 0 14px 0; display:grid; gap:8px
+  }
+  .contact .contact-list i{color:var(--brand); width:20px}
+  .contact .cta-row{display:flex; gap:12px; flex-wrap:wrap}
+  
+  .site-footer{color:var(--muted); text-align:center; padding:18px 0 36px}
+  
+  .theater h2::before {
+    content: "🎭 ";
+  }
+  

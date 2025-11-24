@@ -1,95 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiebe Web Portfolio</title>
-    <link rel="stylesheet" href="portfoliostyles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Devan P. Wiebe</title>
 
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Site Styles -->
+  <link rel="stylesheet" href="portfoliostyles.css" />
 </head>
 <body>
-    <header>
-        <h2>DW</h2>
-        <nav>
-            <a target="_blank" href="https://wiebefamily.me">Family Homepage</a>
-            <a target="_blank" href="https://github.com/sonicsxl23">Github</a>
-            <a target="_blank" href="https://www.linkedin.com/in/devan-wiebe-833353108/">LinkedIn Profile</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-        <div class="nameContainer">
-            <h1>Devan P. Wiebe</h1>
-                <p class="darkerText">Pilot turned software developer</p>
+  <header class="site-header">
+    <div class="brand">
+      <div class="avatar" aria-hidden="true"><img src="/Photos/IMG_6072.jpeg" alt="Family Photo"></div>
+      <div class="brand-text">
+        <h1 class="name">Devan P. Wiebe</h1>
+        <p class="tagline">Aviation executive & safety leader • ATP • Check Airman • CFI (Gold Seal)</p>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a target="_blank" href="https://wiebefamily.me" rel="noopener">Family Homepage</a>
+      <a target="_blank" href="https://github.com/sonicsxl23" rel="noopener">GitHub</a>
+      <a target="_blank" href="https://www.linkedin.com/in/devan-wiebe-833353108/" rel="noopener">LinkedIn</a>
+      <a class="btn primary" href="mailto:devan@wiebefamily.me">Email Me</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Intro -->
+    <section class="about card">
+      <h2>About Me</h2>
+      <p>
+        I’m an aviation professional and leader with 8,500+ flight hours and progressive responsibility across
+        flight operations, safety, and security. I currently serve as <strong>Chief Operating Officer & Director of Operations</strong>
+        for Waltzing Matilda Aviation, where I oversee pilots, schedules, fleet readiness, training programs, and
+        company safety/security systems (SMS, ERP, D&A, TSA). I believe in just culture, operational
+        discipline, and building teams that deliver safe, reliable results.
+      </p>
+    </section>
+
+    <!-- Quick Facts -->
+    <section class="facts grid-3">
+      <div class="fact card">
+        <i class="fa-solid fa-id-badge"></i>
+        <div>
+          <h3>Certificates & Ratings</h3>
+          <p>ATP (AMEL/ASEL) • Commercial SES & Glider • CFI/CFII/MEI (Gold Seal) • AGI •
+             Type Rated: CE-500 & HA-420 • 135 PIC/SIC & Instructor/Check Airman</p>
         </div>
-        <div class="statsContainer">
-            <div>
-                <img class="profileImage" src="https://media.licdn.com/dms/image/C4E03AQGxuvkep0xM1Q/profile-displayphoto-shrink_200_200/0/1629630293980?e=2147483647&v=beta&t=WANk65udq3KtI_oQOsfRhbN8ZzGptK82PceWA2jTaTk" alt="Honda Flightdeck">
-            </div>
-            <div class="stats darkerText">
-                <div>
-                    <div>
-                        <i class="fa-brands fa-github"></i>
-                    </div>
-                    <p class="">1 Github Repository</p>
-                </div>
-                <div>
-                    <div>
-                        <i class="fa-brands fa-html5"></i>
-                    </div>
-                    <p class="">3 html projects completed</p>
-                </div>
-                <div>
-                    <div>
-                        <i class="fa-solid fa-file-code"></i>
-                    </div>
-                    <p class="">9 commits this year</p>
-                </div>
-            </div>
+      </div>
+      <div class="fact card">
+        <i class="fa-solid fa-shield-heart"></i>
+        <div>
+          <h3>Safety & Security</h3>
+          <p>FAASTeam Rep (Boston) • SMS Principles (MITRE) • AOSC • Safety Mgmt, ERP,
+             IEP</p>
         </div>
-        <p class="aboutMe">Hello! My name is Devan Wiebe. I have been working in aviation as a pilot and in management for over 15 years. I got into software development because solving problems and writing code facinates me. I love to see people and projects come together to produce meaningful results.</p>
-        <div class="darkerText">
-            <a class="outreach" href="mailto:devan@wiebefamily.me">
-                <i class="fa-solid fa-arrow-right"></i>
-                <p>Email me</p>
-            </a>
+      </div>
+      <div class="fact card">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <div>
+          <h3>Experience</h3>
+          <p>8,500+ hours • Part 135/121 training leadership • Dept. management • Pilot hiring,
+             checking, and standardization</p>
         </div>
-        </section>
-        <section class="projectContainer">
-            <p class="darkerText headerText">Latest Projects</p>
-            <div class="projectItem">
-                <div>
-                    <p class="darkerText">Jan 28, 2024</p>
-                    <p>Family Website Design</p>
-                </div>
-                <div>
-                    <img src="/Photos/IMG_3759.jpeg" alt="familywebsitehomepage-img"/>
-                </div>
-            </div>
-            <div class="projectItem">
-                <div>
-                    <p class="darkerText">Jan 28, 2024</p>
-                    <p>Airline Start-up</p>
-                </div>
-                <div>
-                    <img src="/Photos/IMG_1830.jpeg" alt="familywebsitehomepage-img"/>
-                </div>
-            </div>
-            <div class="projectItem">
-                <div>
-                    <p class="darkerText">Jan 28, 2024</p>
-                    <p>Aircraft management and flying</p>
-                </div>
-                <div>
-                    <img src="/Photos/IMG_1244.jpeg" alt="familywebsitehomepage-img"/>
-                </div>
-            </div>
-        </section>
-    </main>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="highlights card">
+      <h2>Career Highlights</h2>
+      <ul class="timeline">
+        <li>
+          <h4>Chief Operating Officer & Director of Operations (Part 119) — Waltzing Matilda Aviation</h4>
+          <span class="meta">Aug 2024 – Present • Bedford, MA</span>
+          <p>Lead Part 135 operations: pilots, scheduling, fleet status, training, manuals/OpSpecs, and
+             enterprise Safety & Security programs (SMS, ERP, MQ&A, TSA, D&A).</p>
+        </li>
+        <li>
+          <h4>VP, Safety & Security — Waltzing Matilda Aviation</h4>
+          <span class="meta">Jan 2021 – Aug 2024</span>
+          <p>Built and ran Safety Dept during 121 application: SMS, ERP, IEP, MQ&A, OSHA. Led audits,
+             safety meetings, and regulatory coordination with FAA & TSA.</p>
+        </li>
+        <li>
+          <h4>PIC / SIC / Check Airman — Waltzing Matilda Aviation</h4>
+          <span class="meta">Sep 2018 – Oct 2022</span>
+          <p>CE-550 Captain; managed pilot scheduling, fleet status, and 135 training; instructor & line
+             check airman.</p>
+        </li>
+        <li>
+          <h4>PIC / Instructor / Check Airman — Skyline Flight</h4>
+          <span class="meta">Jul 2016 – Jul 2020</span>
+          <p>Single-pilot 135 charter; built hiring/training programs, IOE oversight, recurrent checks, and
+             training records compliance.</p>
+        </li>
+        <li>
+          <h4>Chief Flight Instructor — Aptis Aviation</h4>
+          <span class="meta">Nov 2014 – Sep 2018</span>
+          <p>Led instructors, safety procedures, and syllabi. Earned FAA Gold Seal through >80% pass rate.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills card">
+      <h2>Core Skills</h2>
+      <ul class="chip-list">
+        <li>Operational Leadership</li><li>SMS / Safety Assurance</li><li>Training & Checking</li>
+        <li>Regulatory Compliance</li><li>TSA Programs</li><li>Emergency Response</li>
+        <li>Internal Evaluation</li><li>Maintenance QA Coordination</li><li>Team Building</li>
+      </ul>
+    </section>
+
+    <!-- Theater Experience -->
+<section class="theater card">
+    <h2>Lighting Design & Technical Theater</h2>
+    <p>
+      Outside of aviation, I serve as <strong>Lighting Director and Designer</strong> for
+      <a href="https://www.newlifefinearts.org" target="_blank" rel="noopener">
+        New Life Fine Arts
+      </a>, a Concord, Massachusetts–based non-profit musical theater company that for more
+      than 30 years has produced <em>“theater you can believe in.”</em> The organization brings
+      “new life” to classic works while sharing stories that reflect timeless truths of faith
+      through the arts — especially musical theater, which unites music, drama, dance, and
+      design into one creative expression.
+    </p>
+    <ul class="timeline">
+      <li>
+        <h4>Lighting Director — New Life Fine Arts</h4>
+        <span class="meta">2015 – Present • Concord, MA</span>
+        <p>
+          • Design, program, and operate lighting for multiple large-scale stage productions each year.<br>
+          • Collaborate with directors, choreographers, and musicians to support storytelling through
+            lighting that enhances emotional and spiritual impact.<br>
+          • Manage volunteer technical teams during setup, focus, and performances.<br>
+          • Maintain and update stage lighting systems to ensure reliability, safety, and artistic quality.<br>
+          • Contribute to the company’s mission to create God-glorifying, high-quality productions that
+            inspire and uplift the community.
+        </p>
+      </li>
+    </ul>
+  </section>
+  
+  
+
+    <!-- Contact -->
+    <section class="contact card">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><i class="fa-solid fa-location-dot"></i> Fitchburg, MA</li>
+        <li><i class="fa-solid fa-phone"></i> <a href="tel:+16177637309">617-763-7309</a></li>
+        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:devan@wiebefamily.me">devan@wiebefamily.me</a></li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn" href="Devan's_Resume_2025.pdf" target="_blank" rel="noopener">View Full Résumé</a>
+        <a class="btn outline" href="https://www.linkedin.com/in/devan-wiebe-833353108/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="y"></span> Devan P. Wiebe — All rights reserved.</small>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
