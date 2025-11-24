@@ -1,57 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Devan and Emily Wiebe Family</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <meta name="description" content="Wiebefamily Website"/>
-    </head>
-    <body>
-        <header>
-            <h2 class="topLeft">
-                Devan and Emily Wiebe Family <i class="fa-regular fa-paper-plane"></i><a class="outreach" href="mailto:devan.emily@wiebefamily.me">Email Us</a>
-            </h2>
-                <p class="topRight">
-                    <a target="_blank" href="/portfolio">About Devan</a>
-                    <a target="_blank" href="https//dewiebefamily.com/emily">About Emily</a>
-                    <a target="_blank" href="https://www.facebook.com/flyerwiebe">Social Media</a>
-                </p>
-        </header>
-        <section class="familyPhoto">
-            <img src="/Photos/Family Photo.jpeg" alt="Family Photo">
-        </section>
-        <section>
-            <h2 class="description">Devan and Emily Wiebe were born and raised in Massachusetts. They are the proud parents of four children.</h2>
-            <img class="DevanEmily" src="/Photos/Devan and Emily.JPG" alt="Devan and Emily">
-            <p class="parents">Devan and Emily</p>
-            <div class="childrenContainer">
-                <div class="Abigail">
-                    <img class="abigail" src="/Photos/Abigail.jpeg" alt="Abigail">
-                    <p>Abigail</p>
-                </div>
-                <div class="Michell">
-                    <img class="mitchell" src="/Photos/Mitchell.jpeg" alt="Mitchell">
-                    <p>Mitchell</p>
-                </div>
-                <div class="Dylan">
-                    <img class="dylan" src="/Photos/Dylan.jpeg" alt="Dylan">
-                    <p>Dylan</p>
-                </div>
-                <div class="Kestrel">
-                    <img class="kestrel" src="/Photos/Kestrel.jpeg" alt="Kestrel">
-                    <p>Kestrel</p>
-                </div>
-            </div>
-        </section>
-        <footer>
-            <p>Link's of Interest to us:
-                <a href="https://www.newlife.org">Our local church family</a>
-                <a href="https://www.csfpakistan.org">Christian Soul Fellowship - Pakistan</a>
-                <a href="https://www.wiebefamily.org">Wiebe Family Website</a>
-            </p>
-            <p>This website est. 2024</p>
-        </footer>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devan and Emily Wiebe Family</title>
+    <meta name="description" content="Wiebefamily Website" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header role="banner">
+      <h2 class="topLeft">
+        Devan and Emily Wiebe Family
+        <i class="fa-regular fa-paper-plane"></i>
+        <a class="outreach" href="mailto:devan.emily@wiebefamily.me">Email Us</a>
+      </h2>
+      <p class="topRight">
+        <a target="_blank" href="/portfolio">About Devan</a>
+        <a target="_blank" href="https://wiebefamily.me/emily">About Emily</a>
+        <a target="_blank" href="https://www.facebook.com/flyerwiebe">Social Media</a>
+      </p>
+    </header>
+
+    <main>
+      <section class="familyPhoto" aria-label="Family Photo">
+        <img class="hero-img fade-edges" src="/Photos/Family Photo 2025.jpeg" alt="Wiebe family portrait" loading="eager" />
+      </section>
+
+      <section aria-label="Family Introduction">
+        <h2 class="description">
+          Devan and Emily Wiebe were born and raised in Massachusetts. They are the
+          proud parents of four children.
+        </h2>
+        <p class="intro">
+          Together we enjoy family adventures, creative projects and homeschooling, music and drama, and sharing life with our church community.
+        </p>
+
+        <img class="DevanEmily couple-img fade-edges" src="/Photos/E362.JPG" alt="Devan and Emily together" loading="lazy" />
+        <p class="parents">Devan and Emily</p>
+
+        <div class="childrenContainer" aria-label="Children">
+          <figure class="Abigail">
+            <img class="abigail" src="/Photos/Abigail.jpeg" alt="Abigail smiling" loading="lazy" />
+            <figcaption>Abigail</figcaption>
+          </figure>
+          <figure class="Mitchell">
+            <img class="mitchell" src="/Photos/Mitchell.jpeg" alt="Mitchell by the door" loading="lazy" />
+            <figcaption>Mitchell</figcaption>
+          </figure>
+          <figure class="Dylan">
+            <img class="dylan" src="/Photos/Dylan.jpeg" alt="Dylan relaxing and smiling" loading="lazy" />
+            <figcaption>Dylan</figcaption>
+          </figure>
+          <figure class="Kestrel">
+            <img class="kestrel" src="/Photos/Kestrel.jpeg" alt="Kestrel laughing" loading="lazy" />
+            <figcaption>Kestrel</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <p>
+        Links of Interest:
+        <a href="https://www.newlife.org" target="_blank" rel="noopener">Our local church family</a>
+        <a href="https://www.csfpakistan.org" target="_blank" rel="noopener">Christian Soul Fellowship - Pakistan</a>
+        <a href="https://www.wiebefamily.org" target="_blank" rel="noopener">Wiebe Family Website</a>
+      </p>
+      <p class="est">This website est. 2024, updated <span id="year"></span></p>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>

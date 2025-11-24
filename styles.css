@@ -1,136 +1,197 @@
 :root {
-    --primary-color: #adf0d4;
-    --secondary-color: #1fd8a4;
-    --bg-color: black;
-    --secondary-bg-color: rgb(50, 49, 49);
+  --primary-color: #adf0d4;
+  --secondary-color: #1fd8a4;
+  --bg-color: #000;
+  --secondary-bg-color: #323131;
+  --accent: #37e6b1;
 }
 
+/* Reset & base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif, 'Times New Roman', Times, serif;
-    transition-duration: 300ms;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  transition: 300ms;
 }
 
 body {
-    background: var(--bg-color);
-    background: linear-gradient(180deg, var(--bg-color) 20%, var(--secondary-bg-color) 90%);
-    color: var(--primary-color);
-    padding: 24px;
-    
+  background: linear-gradient(180deg, var(--bg-color) 20%, var(--secondary-bg-color) 90%);
+  color: var(--primary-color);
+  padding: 24px;
+  animation: fadeIn 0.8s ease-in;
 }
 
+/* Header */
 header {
-    display:flex;
-    justify-content: space-between;
-    margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 10px;
 }
 
-.outreach {
-    color:darkcyan;
-    padding-left: 10px;
-}
+.topRight a { margin-left: 10px; }
 
-i {
-    color:darkcyan;
-    padding-left: 30px;
-}
+.outreach { color: darkcyan; padding-left: 10px; }
+i { color: darkcyan; padding-left: 12px; }
 
+/* Typography accents */
+header h2, .description { color: var(--secondary-color); }
+
+/* Images */
 img {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    justify-content: center;
-    margin:auto;
-}
-
-.topRight {
-    font-size: 1.5em;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 12px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .familyPhoto img {
-    border-bottom: 3px solid rgb(119, 111, 111);
+  border-bottom: 3px solid rgba(119, 111, 111, 0.6);
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
 }
 
-.parents {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding:24px;
-    
-}
-
-.parents, .childrenContainer {
-    font-size: 1.5em;
-}
+.parents, .childrenContainer { font-size: 1.2rem; }
 
 .description {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content:center;
-    margin-right:auto;
-    margin-left: auto;
-    width: 50%;
-    padding-top: 36px;
-    padding-bottom: 36px;
+  text-align: center;
+  margin: 36px auto 12px;
+  width: min(820px, 90%);
 }
 
-.DevanEmily {
-    border-radius: 25%;
+.intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin: 0 auto 24px;
+  width: min(780px, 92%);
+  opacity: .9;
 }
 
+.DevanEmily { border-radius: 25%; }
+
+.parents {
+  text-align: center;
+  padding: 16px 0 24px;
+}
+
+/* Children grid */
 .childrenContainer {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    border-top: 4px solid rgba(82, 79, 79, 0.195);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+  border-top: 4px solid rgba(82, 79, 79, 0.2);
+  padding-top: 18px;
 }
+
+.childrenContainer figure { margin: 0; }
 
 .childrenContainer img {
-    
-    border-radius: 50%;
-    max-width: 400px; /* Ensure images don't exceed container width */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Add spacing between stacked images */
-    
+  border-radius: 50%;
+  max-width: 240px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.childrenContainer img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.6);
+}
+
+figcaption { margin-top: 8px; color: var(--primary-color); }
+
+/* Desktop layout: children side-by-side */
+@media (min-width: 768px) {
+  .childrenContainer {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 36px;
+  }
+  .childrenContainer figure {
+    flex: 1 1 200px;
+    max-width: 250px;
+  }
+  .childrenContainer img {
+    max-width: 200px;
+  }
+}
+
+/* Footer */
 footer {
-    display:flex;
-    justify-content: space-between;
-    border-top: 2px solid rgb(167, 164, 164);
-    margin-top: 36px;
-    padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-top: 2px solid var(--secondary-color);
+  margin-top: 36px;
+  padding-top: 12px;
 }
 
-a{
-    color: lightcyan;
-    padding: 12px;
+a {
+  color: lightcyan;
+  padding: 0 12px;
 }
 
 a:hover {
-    color:aqua;
-    opacity: 70%;
-    cursor: pointer;
+  color: aqua;
+  opacity: 0.85;
+  cursor: pointer;
 }
 
-.est {
-    display: flex;
-    justify-content: flex-end;
+.est { margin-left: auto; }
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .topRight { font-size: 1rem; }
+  .description, .intro { width: 95%; }
 }
 
-@media (min-width: 640px) {
-    .childrenContainer {
-        flex-direction: row;
-        justify-content: space-between;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .childrenContainer img {
-        max-width: 400px;
-        padding: 25px;
-    }
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* --- Hero & couple image sizing --- */
+.hero-img {
+  width: clamp(720px, 50vw, 1200px);   /* typical desktop-friendly width */
+  max-height: 82vh;                    /* never taller than screen */
+  border-radius: 30px;
+  overflow: hidden;
+  height: auto;
+}
+
+.couple-img {
+  width: clamp(420px, 35vw, 900px);    /* between hero and children sizes */
+  height: auto;
+}
+
+/* --- Edge fade to page background using CSS mask --- */
+.fade-edges {
+  /* soft vignette so edges blend into the dark background */
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 78%, rgba(0,0,0,0) 100%);
+  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 38%, rgba(0,0,0,0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+/* Fallback for browsers without mask support: subtle shadow */
+@supports not ((-webkit-mask-image: radial-gradient(black, transparent)) or (mask-image: radial-gradient(black, transparent))) {
+  .fade-edges {
+    box-shadow: 0 8px 26px rgba(0,0,0,0.65), inset 0 0 120px rgba(0,0,0,0.45);
+  }
 }
