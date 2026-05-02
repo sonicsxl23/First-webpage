@@ -97,4 +97,8 @@
   .theater h2::before {
     content: "🎭 ";
   }
+
+  .firearms h2::before {
+    content: "🎯 ";
+  }
   
